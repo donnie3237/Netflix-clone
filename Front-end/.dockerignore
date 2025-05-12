@@ -1,0 +1,30 @@
+# Node/Bun project
+node_modules
+bun.lockb
+npm-debug.log
+pnpm-lock.yaml
+yarn.lock
+
+# Build output (ถ้าใช้ build stage อยู่แล้ว)
+dist
+.next
+out
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# IDE/editor
+.vscode
+.idea
+*.swp
+
+# Test and docs
+coverage
+*.test.*
+*.spec.*
+docs

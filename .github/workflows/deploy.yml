@@ -1,0 +1,23 @@
+name: Deploy to DigitalOcean
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up SSH key
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }} 
+
+    - name: Deploy to DigitalOcean Droplet
+      run: |
+        ssh -o StrictHostKeyChecking=no root@${{ secrets.SSH_PRIVATE_KEY }}  'bash -s' < deploy-script.sh
+      env:
+        DO_SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
