@@ -44,7 +44,7 @@ project-root/
 
 ```bash
 git clone https://github.com/donnie3237/Netflix-clone.git
-cd project-root
+cd Netflix-clone
 ```
 
 2. **Set Environment Variables**
@@ -103,6 +103,6 @@ This will:
 
 Feel free to open an issue or contact the maintainer.
 
-## CICD
+## CI/CD
 
 set `SSH_PRIVATE_KEY` on your github account and click on run button
